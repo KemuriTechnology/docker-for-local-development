@@ -2,9 +2,9 @@
 #   https://docs.docker.com/compose/compose-file/#/versioning
 version: '2'
 
-volumes:
-    database_data:
-        driver: local
+#volumes:
+#    database_data:
+#        driver: local
 
 services:
 ###########################
@@ -36,8 +36,8 @@ services:
         image: mysql:5.6
         expose:
             - 3306
-        volumes:
-            - database_data:/var/lib/mysql
+#        volumes:
+#            - database_data:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: secret
             MYSQL_DATABASE: project
